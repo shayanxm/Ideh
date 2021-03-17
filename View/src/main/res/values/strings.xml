@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ideh</string>
+    <string name="login"><u>حساب کاربری دارید؟ </u></string>
+    <string name="register"><u>حساب کاربری ندارید؟ </u></string>
+    <string name="btn_login"><u>وارد شوید</u></string>
+    <string name="btn_register"><u>ثبت نام کنید</u></string>
+    <string name="success">عملیات با موفقیت انجام شد</string>
+    <string name="network_error">عدم اتصال به اینترنت</string>
+    <string name="back_button_pressed">برای خروج مجددا گزینه بازگشت را بفشارید</string>
+</resources>

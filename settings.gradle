@@ -1,0 +1,6 @@
+include ':ChipInput'
+include ':PC'
+include ':Presenter'
+include ':Model'
+include ':View'
+rootProject.name = "Ideh"

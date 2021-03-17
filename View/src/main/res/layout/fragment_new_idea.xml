@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_background"
+    tools:context="ideh.click.fragment.NewIdeaFragment">
+
+    <LinearLayout
+        android:id="@+id/llLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/prbLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:theme="@style/Theme.Ideh.PrimaryAccent" />
+
+        <Button
+            android:id="@+id/btnRetry"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_drawable"
+            android:fontFamily="@font/iy_regular"
+            android:text="بارگذاری مجدد"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/llData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="0dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@null"
+                        android:fontFamily="@font/iy_regular"
+                        android:gravity="center_vertical"
+                        android:hint="عنوان ایده"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_text"
+                        android:textSize="@dimen/_11ssp">
+
+                        <requestFocus />
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="0dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_125sdp"
+                        android:background="@null"
+                        android:fontFamily="@font/iy_regular"
+                        android:gravity="center_vertical|top"
+                        android:hint="متن ایده"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_text"
+                        android:textSize="@dimen/_11ssp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="0dp">
+
+                    <com.kosarsoft.chipinputlibrary.ChipsInput
+                        android:id="@+id/ddlKeyWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:chip_deletable="true"
+                        app:filterable_custom_chip="true"
+                        app:hint="کلیدواژه خود را تایپ و یا انتخاب نمائید"
+                        app:hintColor="@color/hint_text"
+                        app:maxRows="3"
+                        app:showChipDetailed="false"
+                        app:textSize="@dimen/_11ssp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="0dp">
+
+                    <ideh.click.view.MultiSpinner
+                        android:id="@+id/ddlGenre"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@null" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="0dp">
+
+                    <ideh.click.view.MultiSpinner
+                        android:id="@+id/ddlReviewTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@null" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="0dp">
+
+                    <ideh.click.view.MultiSpinner
+                        android:id="@+id/ddlReviewDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@null" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/btnCategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:src="@drawable/ic_plus" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rcvCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:reverseLayout="true"
+                            tools:listitem="@layout/tag_view" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/recipient_group_FL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    app:alignContent="space_around"
+                    app:alignItems="stretch"
+                    app:flexWrap="wrap"
+                    app:showDivider="beginning|middle|end">
+
+                    <EditText
+                        android:id="@+id/recipient_input_ET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:background="@android:color/transparent"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        app:layout_flexGrow="1" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recipients_list_RV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <ideh.click.view.loading_button.KS_LoadingButton
+                    android:id="@+id/btnSubmit"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/button_drawable"
+                    android:fontFamily="@font/iy_regular"
+                    app:ks_fontFamily="@font/iy_regular"
+                    app:lb_image_padding="@dimen/_11sdp"
+                    app:lb_progress_color="@color/white"
+                    app:lb_progress_padding="@dimen/_11sdp"
+                    app:lb_text="ثبت ایده جدید"
+                    app:lb_text_color="@color/white"
+                    app:lb_text_size="@dimen/_13ssp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

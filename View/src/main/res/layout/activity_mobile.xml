@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_background"
+    tools:context="ideh.click.activity.MobileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/iy_bold"
+            android:text="تایید شماره همراه"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                app:cardCornerRadius="@dimen/_6sdp"
+                app:cardElevation="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:background="@null"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/iy_regular"
+                    android:gravity="center_vertical"
+                    android:hint="شماره موبایل"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_text"
+                    android:textSize="@dimen/_11ssp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ideh.click.view.loading_button.KS_LoadingButton
+                android:id="@+id/btnSubmit"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:background="@drawable/button_drawable"
+                android:fontFamily="@font/iy_regular"
+                app:ks_fontFamily="@font/iy_regular"
+                app:lb_image_padding="@dimen/_11sdp"
+                app:lb_progress_color="@color/white"
+                app:lb_progress_padding="@dimen/_11sdp"
+                app:lb_text="ارسال کد اعتبارسنجی"
+                app:lb_text_color="@color/white"
+                app:lb_text_size="@dimen/_13ssp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

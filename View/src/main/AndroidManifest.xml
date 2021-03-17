@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.click">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="ideh.click.tools.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.Ideh"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:supportsRtl">
+        <activity
+            android:name="ideh.click.activity.IdeaDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ideh.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="ideh.click.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ideh.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="ideh.click.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ideh.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="ideh.click.activity.VerifyCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ideh.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="ideh.click.activity.MobileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ideh.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="ideh.click.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ideh.NoActionBar"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="ideh.click.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ideh.NoActionBar"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ks_fontFamily" format="enum">
+        <enum name="iransans" value="0" />
+        <enum name="iransans_bold" value="1" />
+        <enum name="vazir_black" value="2" />
+        <enum name="vazir_bold" value="3" />
+        <enum name="vazir" value="4" />
+        <enum name="vazir_light" value="5" />
+        <enum name="vazir_medium" value="6" />
+        <enum name="vazir_thin" value="7" />
+        <enum name="samim" value="8" />
+        <enum name="samim_bold" value="9" />
+        <enum name="shabnam" value="10" />
+        <enum name="shabnam_bold" value="11" />
+        <enum name="shabnam_light" value="12" />
+        <enum name="yekan" value="13" />
+        <enum name="adobe_arabic_shin" value="14" />
+    </attr>
+
+    <declare-styleable name="KS_LoadingButton">
+        <attr name="lb_text" format="string" />
+        <attr name="lb_text_color" format="color" />
+        <attr name="lb_progress_color" format="color" />
+        <attr name="lb_text_size" format="dimension" />
+        <attr name="lb_progress_padding" format="dimension" />
+        <attr name="lb_image" format="reference" />
+        <attr name="lb_image_padding" format="dimension" />
+        <attr name="ks_fontFamily" />
+    </declare-styleable>
+</resources>

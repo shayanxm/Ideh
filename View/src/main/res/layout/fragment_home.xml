@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_background"
+    tools:context="ideh.click.fragment.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/llLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/prbLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:theme="@style/Theme.Ideh.PrimaryAccent" />
+
+        <Button
+            android:id="@+id/btnRetry"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_drawable"
+            android:fontFamily="@font/iy_regular"
+            android:text="بارگذاری مجدد"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/llData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/_40sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <ideh.click.view.loading_button.KS_LoadingButton
+            android:id="@+id/btnMore"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@null"
+            android:fontFamily="@font/iy_regular"
+            android:layout_gravity="center|bottom"
+            android:visibility="invisible"
+            app:ks_fontFamily="@font/iy_regular"
+            app:lb_image_padding="@dimen/_11sdp"
+            app:lb_progress_color="@color/colorPrimary"
+            app:lb_progress_padding="@dimen/_11sdp"
+            app:lb_text="مشاهده بیشتر"
+            app:lb_text_color="@color/colorPrimary"
+            app:lb_text_size="@dimen/_13ssp" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>
